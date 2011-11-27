@@ -216,4 +216,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>if  not "$(SolutionDir)"=="*Undefined*" $(SolutionDir)..\..\Tools\nuget\nuget.exe install $(ProjectDir)packages.config -o $(SolutionDir)Packages</PreBuildEvent>
+  </PropertyGroup>
 </Project>
