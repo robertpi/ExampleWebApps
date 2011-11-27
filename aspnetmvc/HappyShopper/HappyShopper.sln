@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHost", "WebHost\WebHost.csproj", "{6DF6CEA8-0D84-44CE-9A37-BDD769505E71}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Web", "Web\Web.fsproj", "{1459E8CC-AD28-48F6-AA77-586A39023B7C}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Model", "Model\Model.fsproj", "{BB1AF5B3-3131-4B68-9DCD-D04D04ED0421}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ETL", "ETL\ETL.fsproj", "{15FB5F98-1B95-42A6-A45C-EC12354A5A67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DF6CEA8-0D84-44CE-9A37-BDD769505E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DF6CEA8-0D84-44CE-9A37-BDD769505E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DF6CEA8-0D84-44CE-9A37-BDD769505E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DF6CEA8-0D84-44CE-9A37-BDD769505E71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1459E8CC-AD28-48F6-AA77-586A39023B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1459E8CC-AD28-48F6-AA77-586A39023B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1459E8CC-AD28-48F6-AA77-586A39023B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1459E8CC-AD28-48F6-AA77-586A39023B7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB1AF5B3-3131-4B68-9DCD-D04D04ED0421}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB1AF5B3-3131-4B68-9DCD-D04D04ED0421}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB1AF5B3-3131-4B68-9DCD-D04D04ED0421}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB1AF5B3-3131-4B68-9DCD-D04D04ED0421}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15FB5F98-1B95-42A6-A45C-EC12354A5A67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15FB5F98-1B95-42A6-A45C-EC12354A5A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15FB5F98-1B95-42A6-A45C-EC12354A5A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15FB5F98-1B95-42A6-A45C-EC12354A5A67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
+	EndGlobalSection
+EndGlobal

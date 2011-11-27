@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15fb5f98-1b95-42a6-a45c-ec12354a5a67}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ETL</RootNamespace>
+    <AssemblyName>ETL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Name>ETL</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <Tailcalls>false</Tailcalls>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <DocumentationFile>bin\Debug\ETL.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <Tailcalls>true</Tailcalls>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <DocumentationFile>bin\Release\ETL.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="FSharp.Core" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.2.0.0.2000\lib\net40\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Raven.Abstractions">
+      <HintPath>..\packages\RavenDB.1.0.531\lib\net40\Raven.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Raven.Client.Debug">
+      <HintPath>..\packages\RavenDB.1.0.531\lib\net40\Raven.Client.Debug.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Raven.Client.Lightweight">
+      <HintPath>..\packages\RavenDB.1.0.531\lib\net40\Raven.Client.Lightweight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Raven.Client.MvcIntegration">
+      <HintPath>..\packages\RavenDB.1.0.531\lib\net40\Raven.Client.MvcIntegration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Strangelights.FsRavenDbTools">
+      <HintPath>..\packages\FsRavenDbTools.0.5.4\lib\net40\Strangelights.FsRavenDbTools.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Products.fs" />
+    <None Include="Script.fsx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.fsproj">
+      <Name>Model</Name>
+      <Project>{bb1af5b3-3131-4b68-9dcd-d04d04ed0421}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\FSharp\1.0\Microsoft.FSharp.Targets" Condition="!Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
+  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>
